@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mEb-h3-T7K" userLabel="CalendarView">
-                                <rect key="frame" x="10" y="144" width="580" height="60"/>
+                                <rect key="frame" x="10" y="154" width="580" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQK-IG-oiP">
                                         <rect key="frame" x="0.0" y="0.0" width="580" height="60"/>
@@ -41,7 +41,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWF-Yh-3zO" userLabel="OptionsView">
-                                <rect key="frame" x="10" y="224" width="580" height="60"/>
+                                <rect key="frame" x="10" y="234" width="580" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3HI-je-7z7">
                                         <rect key="frame" x="0.0" y="0.0" width="580" height="60"/>
@@ -62,7 +62,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmN-Vf-DAB" userLabel="PlanView">
-                                <rect key="frame" x="10" y="64" width="580" height="60"/>
+                                <rect key="frame" x="10" y="74" width="580" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wa-g7-mZW">
                                         <rect key="frame" x="0.0" y="0.0" width="580" height="60"/>
@@ -94,7 +94,7 @@
                             <constraint firstItem="mEb-h3-T7K" firstAttribute="top" secondItem="rmN-Vf-DAB" secondAttribute="bottom" constant="20" id="N6f-hc-wdB"/>
                             <constraint firstItem="mEb-h3-T7K" firstAttribute="height" secondItem="rmN-Vf-DAB" secondAttribute="height" id="NdT-h8-NfO"/>
                             <constraint firstItem="mEb-h3-T7K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="PGa-ML-dwf"/>
-                            <constraint firstItem="rmN-Vf-DAB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Uis-fi-0mt"/>
+                            <constraint firstItem="rmN-Vf-DAB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="Uis-fi-0mt"/>
                             <constraint firstItem="iWF-Yh-3zO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="ckn-WP-LsY"/>
                             <constraint firstAttribute="trailing" secondItem="rmN-Vf-DAB" secondAttribute="trailing" constant="10" id="sZS-7k-s2m"/>
                         </constraints>
@@ -191,7 +191,7 @@
                                 <rect key="frame" x="10" y="54" width="580" height="546"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hq4-tt-gmy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="studentReuse" id="hq4-tt-gmy">
                                         <rect key="frame" x="0.0" y="72" width="580" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hq4-tt-gmy" id="kJe-5x-caO">
@@ -307,6 +307,9 @@
                                         <state key="normal" title="Connect">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="userConnect:" destination="u5l-0v-RYI" eventType="touchUpInside" id="ht0-qe-ZGf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -351,38 +354,57 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8g3-6b-pp9">
-                                <rect key="frame" x="149" y="304" width="150" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r18-qm-dVu" userLabel="InstructorButton">
-                                <rect key="frame" x="20" y="361" width="180" height="45"/>
-                                <color key="backgroundColor" red="0.78179848029999999" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="Instructor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJo-A4-ulg" userLabel="ManagerButton">
-                                <rect key="frame" x="400" y="360" width="180" height="45"/>
-                                <color key="backgroundColor" red="0.78179848029999999" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="Manager"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d1B-Yj-AOq">
                                 <rect key="frame" x="149" y="251" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8g3-6b-pp9">
+                                <rect key="frame" x="149" y="304" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJo-A4-ulg" userLabel="ManagerButton">
+                                <rect key="frame" x="400" y="361" width="180" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="tintColor" red="0.79607843140000001" green="0.94901960780000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Manager">
+                                    <color key="titleColor" red="0.58431372550000005" green="0.59607843140000005" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.58431372549019611" green="0.59607843137254901" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="managerButton:" destination="u5l-0v-RYI" eventType="touchUpInside" id="TdD-wO-YJW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r18-qm-dVu" userLabel="InstructorButton">
+                                <rect key="frame" x="20" y="361" width="180" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="tintColor" red="0.79607843140000001" green="0.94901960780000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Instructor">
+                                    <color key="titleColor" red="0.58431372550000005" green="0.59607843140000005" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.58431372550000005" green="0.59607843140000005" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="instructorButton:" destination="u5l-0v-RYI" eventType="touchUpInside" id="Pbi-fu-kE2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -416,6 +438,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="JmR-h8-p7X"/>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="deviceId" destination="8g3-6b-pp9" id="ITp-SM-QnG"/>
+                        <outlet property="instructorButton" destination="r18-qm-dVu" id="yMb-QK-RtC"/>
+                        <outlet property="managerButton" destination="bJo-A4-ulg" id="OBp-57-cCF"/>
+                        <outlet property="sessionId" destination="d1B-Yj-AOq" id="bhN-AM-Dng"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eob-bO-fkX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -432,10 +460,83 @@
                     <view key="view" contentMode="scaleToFill" id="USX-fi-ri9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PUk-UY-u6I">
+                                <rect key="frame" x="20" y="74" width="560" height="430"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="repeatingCell" id="nbs-qy-hlm" customClass="TemplateCell" customModule="AppDeploymentProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nbs-qy-hlm" id="lRb-C2-qnI">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hP-Pn-Qbk" userLabel="TitleLabel">
+                                                    <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1hP-Pn-Qbk" firstAttribute="top" secondItem="lRb-C2-qnI" secondAttribute="top" id="NBi-u3-mTV"/>
+                                                <constraint firstAttribute="trailing" secondItem="1hP-Pn-Qbk" secondAttribute="trailing" id="ceS-9s-hlv"/>
+                                                <constraint firstItem="1hP-Pn-Qbk" firstAttribute="leading" secondItem="lRb-C2-qnI" secondAttribute="leading" id="gec-Yp-jeI"/>
+                                                <constraint firstAttribute="bottom" secondItem="1hP-Pn-Qbk" secondAttribute="bottom" id="jSD-98-EGI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="1hP-Pn-Qbk" id="QVj-kx-LPg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="6r8-q9-0nk" id="qJO-bR-lC3"/>
+                                    <outlet property="delegate" destination="6r8-q9-0nk" id="BnP-VI-kwp"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Um6-bo-bPn" userLabel="AddButton">
+                                <rect key="frame" x="20" y="534" width="80" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="pq5-Fn-Ljr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addItem:" destination="6r8-q9-0nk" eventType="touchUpInside" id="RY0-Go-0vO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKy-6M-LDx" userLabel="DeleteButton">
+                                <rect key="frame" x="500" y="534" width="80" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="KIg-JV-cWy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteItem:" destination="6r8-q9-0nk" eventType="touchUpInside" id="tjd-Az-uAu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Um6-bo-bPn" firstAttribute="top" secondItem="PUk-UY-u6I" secondAttribute="bottom" constant="30" id="0kB-4H-9FM"/>
+                            <constraint firstItem="gQZ-ek-MJ7" firstAttribute="top" secondItem="zKy-6M-LDx" secondAttribute="bottom" constant="30" id="1GM-FZ-5DK"/>
+                            <constraint firstItem="zKy-6M-LDx" firstAttribute="centerY" secondItem="Um6-bo-bPn" secondAttribute="centerY" id="1IR-RY-G4v"/>
+                            <constraint firstItem="PUk-UY-u6I" firstAttribute="leading" secondItem="USX-fi-ri9" secondAttribute="leading" constant="20" id="1TN-yg-Ipx"/>
+                            <constraint firstItem="Um6-bo-bPn" firstAttribute="leading" secondItem="USX-fi-ri9" secondAttribute="leading" constant="20" id="2Pb-GQ-Kv6"/>
+                            <constraint firstAttribute="trailing" secondItem="zKy-6M-LDx" secondAttribute="trailing" constant="20" id="3zv-s6-YkG"/>
+                            <constraint firstItem="PUk-UY-u6I" firstAttribute="top" secondItem="ZKX-sD-rJH" secondAttribute="bottom" constant="30" id="O8f-GU-QcP"/>
+                            <constraint firstAttribute="trailing" secondItem="PUk-UY-u6I" secondAttribute="trailing" constant="20" id="SFS-RK-VnJ"/>
+                            <constraint firstItem="gQZ-ek-MJ7" firstAttribute="top" secondItem="Um6-bo-bPn" secondAttribute="bottom" constant="30" id="tHF-ow-iTw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Lesson Template" id="wHd-Uj-Ehm"/>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="templateTableView" destination="PUk-UY-u6I" id="znR-NU-FuH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HMF-ov-rN0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,4 +11,12 @@ import UIKit
 
 class UserSingleton {
     
+    static let sharedInformation = UserSingleton()
+    
+    static var userClass: Int!
+    
+    init() {
+//        let defaults = NSUserDefaults.standardUserDefaults()
+    }
+    
 }

@@ -20,6 +20,8 @@
 		5D5B742E1D089CA800D9FA61 /* NewStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B742D1D089CA800D9FA61 /* NewStudentViewController.swift */; };
 		5D5B74301D089FF100D9FA61 /* LessonTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B742F1D089FF100D9FA61 /* LessonTemplateViewController.swift */; };
 		5D5B74321D08CC3800D9FA61 /* UserSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B74311D08CC3800D9FA61 /* UserSingleton.swift */; };
+		5D5B74361D0A303300D9FA61 /* CustomTemplateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B74351D0A303300D9FA61 /* CustomTemplateCell.swift */; };
+		5D5B74381D0A680000D9FA61 /* TemplateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B74371D0A680000D9FA61 /* TemplateItem.swift */; };
 		5DB9F52A1D0758B80040666A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB9F5291D0758B80040666A /* CalendarViewController.swift */; };
 		5DB9F52C1D0758CA0040666A /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB9F52B1D0758CA0040666A /* PlanViewController.swift */; };
 		5DB9F52E1D0758DB0040666A /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB9F52D1D0758DB0040666A /* OptionsViewController.swift */; };
@@ -62,6 +64,8 @@
 		5D5B742D1D089CA800D9FA61 /* NewStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewStudentViewController.swift; sourceTree = "<group>"; };
 		5D5B742F1D089FF100D9FA61 /* LessonTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonTemplateViewController.swift; sourceTree = "<group>"; };
 		5D5B74311D08CC3800D9FA61 /* UserSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSingleton.swift; sourceTree = "<group>"; };
+		5D5B74351D0A303300D9FA61 /* CustomTemplateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTemplateCell.swift; sourceTree = "<group>"; };
+		5D5B74371D0A680000D9FA61 /* TemplateItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateItem.swift; sourceTree = "<group>"; };
 		5DB9F5291D0758B80040666A /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		5DB9F52B1D0758CA0040666A /* PlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
 		5DB9F52D1D0758DB0040666A /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
@@ -123,13 +127,15 @@
 				5D5B742B1D089C9E00D9FA61 /* SelectedStudentViewController.swift */,
 				5D5B742D1D089CA800D9FA61 /* NewStudentViewController.swift */,
 				5DB9F52D1D0758DB0040666A /* OptionsViewController.swift */,
+				5D5B74311D08CC3800D9FA61 /* UserSingleton.swift */,
 				5D5B742F1D089FF100D9FA61 /* LessonTemplateViewController.swift */,
+				5D5B74371D0A680000D9FA61 /* TemplateItem.swift */,
+				5D5B74351D0A303300D9FA61 /* CustomTemplateCell.swift */,
 				5D0CB0FC1CFE535D00001C96 /* Main.storyboard */,
 				5D0CB1021CFE535D00001C96 /* Assets.xcassets */,
 				5D0CB1041CFE535D00001C96 /* LaunchScreen.storyboard */,
 				5D0CB1071CFE535D00001C96 /* Info.plist */,
 				5D0CB0FF1CFE535D00001C96 /* AppDeploymentProject.xcdatamodeld */,
-				5D5B74311D08CC3800D9FA61 /* UserSingleton.swift */,
 			);
 			path = AppDeploymentProject;
 			sourceTree = "<group>";
@@ -285,7 +291,9 @@
 			files = (
 				5D5B74321D08CC3800D9FA61 /* UserSingleton.swift in Sources */,
 				5D5B74301D089FF100D9FA61 /* LessonTemplateViewController.swift in Sources */,
+				5D5B74361D0A303300D9FA61 /* CustomTemplateCell.swift in Sources */,
 				5D5B742A1D089C7D00D9FA61 /* StudentListViewController.swift in Sources */,
+				5D5B74381D0A680000D9FA61 /* TemplateItem.swift in Sources */,
 				5DB9F52A1D0758B80040666A /* CalendarViewController.swift in Sources */,
 				5DB9F52C1D0758CA0040666A /* PlanViewController.swift in Sources */,
 				5D0CB1011CFE535D00001C96 /* AppDeploymentProject.xcdatamodeld in Sources */,
