@@ -10,25 +10,20 @@ import UIKit
 
 class LessonTemplateViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
+    //Declaration of IBOutlets
     @IBOutlet weak var templateTableView : UITableView!
     
+    //Declare variables and constants
     var dataArray: [TemplateItem] = []
     let alert = UIAlertController(title: "New Requirement", message: "Please input the title of the student requirement and then the displayed text.", preferredStyle: UIAlertControllerStyle.Alert)
     var inputTitle: UITextField!
     var inputTemplate: UITextField!
-    let mutableItem: TemplateItem = TemplateItem()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let test1: TemplateItem = TemplateItem()
-        test1.title = "Test1"
-        dataArray.append(test1)
         
-        let test2: TemplateItem = TemplateItem()
-        test2.title = "Test2"
-        dataArray.append(test2)
-        
+        //Set up the alert controller with text fields and actions here
         alert.addTextFieldWithConfigurationHandler(titleTextField)
         alert.addTextFieldWithConfigurationHandler(templateTextField)
         alert.addAction(UIAlertAction(title: "Add", style: .Default, handler: {action in self.addTemplate()}))
@@ -41,25 +36,25 @@ class LessonTemplateViewController: UIViewController, UITableViewDataSource, UIT
     
     // MARK: - User Defined Functions
     
+    
+    //Declare two functions that will serve as the handlers for the alert text fields
     func titleTextField(textField: UITextField!){
         textField.placeholder = "Enter the title"
         inputTitle = textField
     }
-    
     func templateTextField(textField: UITextField!){
         textField.placeholder = "Enter the template text"
         inputTemplate = textField
     }
     
+    //Allow the user to add an item onto the displayed table view, updating the table view and adding the item to the array
     func addTemplate() {
-//        let mutableItem: TemplateItem = TemplateItem()
-        templateTableView.editing = !templateTableView.editing
-        print(inputTitle.text!, inputTemplate.text!)
+        let mutableItem: TemplateItem = TemplateItem()
         mutableItem.title = inputTitle.text!
         mutableItem.templateText = inputTemplate.text!
-//        dataArray.append(mutableItem)
+        dataArray.append(mutableItem)
+        templateTableView.reloadData()
         clearAlert()
-//        print(dataArray[0].title, dataArray[0].templateText)
     }
     
     func clearAlert() {
@@ -67,11 +62,15 @@ class LessonTemplateViewController: UIViewController, UITableViewDataSource, UIT
         inputTemplate.text = ""
     }
     
+    func tableViewToggle() {
+        templateTableView.editing = !templateTableView.editing
+    }
+    
     // MARK: - User Defined IBActions
     
     //Create an IBAction that allows the user to edit the objects onscreen for deletion
     @IBAction func deleteItem(sender: AnyObject){
-        templateTableView.editing = !templateTableView.editing
+        tableViewToggle()
     }
     
     /*Create an IBAction that allows a user to add a row to the table view, displaying a pop-up which will allow the user to enter
@@ -116,12 +115,7 @@ class LessonTemplateViewController: UIViewController, UITableViewDataSource, UIT
             
             //Delete the row from the index path
             templateTableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-        }
-        
-        if (editingStyle == UITableViewCellEditingStyle.Insert){
-            dataArray.insert(mutableItem, atIndex: indexPath.row)
-            
-            templateTableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            tableViewToggle()
         }
     }
 

@@ -9,12 +9,17 @@
 import UIKit
 import MultipeerConnectivity
 
-class OptionsViewController: UIViewController, MCBrowserViewControllerDelegate, MCSessionDelegate {
+class OptionsViewController: UIViewController, MCBrowserViewControllerDelegate, MCSessionDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var sessionId: UITextField!
     @IBOutlet weak var deviceId: UITextField!
     @IBOutlet weak var instructorButton: UIButton!
     @IBOutlet weak var managerButton: UIButton!
+    
+    //Declare variables and constants here
+    var deviceName: String!
+    let alert = UIAlertController(title: "No Session ID", message: "Please enter at least a Session ID and press return to save in order to search for other users.", preferredStyle: UIAlertControllerStyle.Alert)
+    
     
     /* Multipeer Application building blocks */
     var peerID:MCPeerID! //Our device's ID or name as viewed by other devices "browsing" for a connection
@@ -23,15 +28,21 @@ class OptionsViewController: UIViewController, MCBrowserViewControllerDelegate, 
     var advertiser:MCAdvertiserAssistant! //Helps us easily advertise ourselves to nearby MCBrowsers
     
     //Setting a channel for the game connection
-    let serviceID: String = ""
+    var serviceID: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        deviceId.delegate = self
+        sessionId.delegate = self
+        
+        //Set up button outlines
         instructorButton.layer.borderWidth = 0.1
         instructorButton.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).CGColor
         managerButton.layer.borderWidth = 0.1
         managerButton.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).CGColor
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
 
         // Do any additional setup after loading the view.
         
@@ -42,10 +53,6 @@ class OptionsViewController: UIViewController, MCBrowserViewControllerDelegate, 
         session = MCSession(peer: peerID)
         //Tell the session to look for the necessary functions inside this class
         session.delegate = self
-        
-        //Set up and start advertising immediately
-        advertiser = MCAdvertiserAssistant(serviceType: serviceID, discoveryInfo: nil, session: session)
-        advertiser.start()
         
         
         
@@ -63,30 +70,41 @@ class OptionsViewController: UIViewController, MCBrowserViewControllerDelegate, 
      selected at one time, and changes the background color of the button on selection */
     func buttonToggle(sender: UIButton){
         sender.selected = !sender.selected
-//        print(sender.tag)
         UserSingleton.userClass = sender.tag
-        print(UserSingleton.userClass)
+    }
+    
+    //Change the
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        deviceName = deviceId.text
+        serviceID = sessionId.text
+        return true
     }
     
     //Mark: User Defined IBActions
     
     @IBAction func managerButton(sender: UIButton){
         buttonToggle(sender)
-        
-    
     }
     
     @IBAction func instructorButton(sender: UIButton){
         buttonToggle(sender)
-        
+    }
+    
+    @IBAction func userNameChange(sender: UITextField){
         
     }
     
+    //Denote an action which will start the advertiser and pull up the browser if the user has entered a serviceID. If not, show an error message
     @IBAction func userConnect(sender: AnyObject) {
-        browser = MCBrowserViewController(serviceType: serviceID, session: session)
-        browser.delegate = self
-        self.presentViewController(browser, animated: true, completion: nil)
-        
+        if let roomID = serviceID {
+            advertiser = MCAdvertiserAssistant(serviceType: roomID, discoveryInfo: nil, session: session)
+            advertiser.start()
+            browser = MCBrowserViewController(serviceType: roomID, session: session)
+            browser.delegate = self
+            self.presentViewController(browser, animated: true, completion: nil)
+        } else {
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
     //Mark: MCBrowserViewControllerDelegate Callbacks
@@ -113,8 +131,6 @@ class OptionsViewController: UIViewController, MCBrowserViewControllerDelegate, 
     
     // Received data from remote peer. This also lets the program know that the opponent is ready, and that the game can start
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
-
-        
     }
     
     // Received a byte stream from remote peer.
