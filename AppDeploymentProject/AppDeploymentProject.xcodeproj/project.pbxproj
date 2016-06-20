@@ -22,6 +22,10 @@
 		5D5B74321D08CC3800D9FA61 /* UserSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B74311D08CC3800D9FA61 /* UserSingleton.swift */; };
 		5D5B74361D0A303300D9FA61 /* CustomTemplateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B74351D0A303300D9FA61 /* CustomTemplateCell.swift */; };
 		5D5B74381D0A680000D9FA61 /* TemplateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B74371D0A680000D9FA61 /* TemplateItem.swift */; };
+		5D9238841D1326F100C6C13C /* CustomCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9238831D1326F100C6C13C /* CustomCalendarCell.swift */; };
+		5D9238881D14985100C6C13C /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9238871D14985100C6C13C /* CustomNavController.swift */; };
+		5D983BE01D16152C00C999AD /* CalendarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D983BDF1D16152C00C999AD /* CalendarData.swift */; };
+		5D983BE21D1771B700C999AD /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D983BE11D1771B700C999AD /* Student.swift */; };
 		5DB9F52A1D0758B80040666A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB9F5291D0758B80040666A /* CalendarViewController.swift */; };
 		5DB9F52C1D0758CA0040666A /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB9F52B1D0758CA0040666A /* PlanViewController.swift */; };
 		5DB9F52E1D0758DB0040666A /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB9F52D1D0758DB0040666A /* OptionsViewController.swift */; };
@@ -66,6 +70,10 @@
 		5D5B74311D08CC3800D9FA61 /* UserSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSingleton.swift; sourceTree = "<group>"; };
 		5D5B74351D0A303300D9FA61 /* CustomTemplateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTemplateCell.swift; sourceTree = "<group>"; };
 		5D5B74371D0A680000D9FA61 /* TemplateItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateItem.swift; sourceTree = "<group>"; };
+		5D9238831D1326F100C6C13C /* CustomCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCalendarCell.swift; sourceTree = "<group>"; };
+		5D9238871D14985100C6C13C /* CustomNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
+		5D983BDF1D16152C00C999AD /* CalendarData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarData.swift; sourceTree = "<group>"; };
+		5D983BE11D1771B700C999AD /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		5DB9F5291D0758B80040666A /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		5DB9F52B1D0758CA0040666A /* PlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
 		5DB9F52D1D0758DB0040666A /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
@@ -120,8 +128,12 @@
 			isa = PBXGroup;
 			children = (
 				5D0CB0F81CFE535D00001C96 /* AppDelegate.swift */,
+				5D9238871D14985100C6C13C /* CustomNavController.swift */,
 				5D0CB0FA1CFE535D00001C96 /* ViewController.swift */,
 				5DB9F5291D0758B80040666A /* CalendarViewController.swift */,
+				5D9238831D1326F100C6C13C /* CustomCalendarCell.swift */,
+				5D983BDF1D16152C00C999AD /* CalendarData.swift */,
+				5D983BE11D1771B700C999AD /* Student.swift */,
 				5DB9F52B1D0758CA0040666A /* PlanViewController.swift */,
 				5D5B74291D089C7D00D9FA61 /* StudentListViewController.swift */,
 				5D5B742B1D089C9E00D9FA61 /* SelectedStudentViewController.swift */,
@@ -290,17 +302,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D5B74321D08CC3800D9FA61 /* UserSingleton.swift in Sources */,
+				5D983BE01D16152C00C999AD /* CalendarData.swift in Sources */,
 				5D5B74301D089FF100D9FA61 /* LessonTemplateViewController.swift in Sources */,
 				5D5B74361D0A303300D9FA61 /* CustomTemplateCell.swift in Sources */,
 				5D5B742A1D089C7D00D9FA61 /* StudentListViewController.swift in Sources */,
 				5D5B74381D0A680000D9FA61 /* TemplateItem.swift in Sources */,
+				5D983BE21D1771B700C999AD /* Student.swift in Sources */,
 				5DB9F52A1D0758B80040666A /* CalendarViewController.swift in Sources */,
 				5DB9F52C1D0758CA0040666A /* PlanViewController.swift in Sources */,
 				5D0CB1011CFE535D00001C96 /* AppDeploymentProject.xcdatamodeld in Sources */,
 				5DB9F52E1D0758DB0040666A /* OptionsViewController.swift in Sources */,
 				5D5B742C1D089C9E00D9FA61 /* SelectedStudentViewController.swift in Sources */,
+				5D9238841D1326F100C6C13C /* CustomCalendarCell.swift in Sources */,
 				5D5B742E1D089CA800D9FA61 /* NewStudentViewController.swift in Sources */,
 				5D0CB0FB1CFE535D00001C96 /* ViewController.swift in Sources */,
+				5D9238881D14985100C6C13C /* CustomNavController.swift in Sources */,
 				5D0CB0F91CFE535D00001C96 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
