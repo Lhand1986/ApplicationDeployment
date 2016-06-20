@@ -70,7 +70,7 @@ class OptionsViewController: UIViewController, MCBrowserViewControllerDelegate, 
      selected at one time, and changes the background color of the button on selection */
     func buttonToggle(sender: UIButton){
         sender.selected = !sender.selected
-        UserSingleton.userClass = sender.tag
+        UserSingleton.sharedInstance.userClass = sender.tag
     }
     
     //Change the
@@ -125,6 +125,7 @@ class OptionsViewController: UIViewController, MCBrowserViewControllerDelegate, 
     //Function that notifies when you have connected to another peer
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
         dispatch_async(dispatch_get_main_queue(), {
+            UserSingleton.sharedInstance.userConnected = true
 
         })
     }
