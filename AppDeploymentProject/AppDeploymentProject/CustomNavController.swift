@@ -1,14 +1,14 @@
 //
-//  CalendarViewController.swift
+//  CustomNavController.swift
 //  AppDeploymentProject
 //
-//  Created by Levi Hand on 6/7/16.
+//  Created by Levi Hand on 6/17/16.
 //  Copyright © 2016 Levi Hand. All rights reserved.
 //
 
 import UIKit
 
-class CalendarViewController: UIViewController {
+class CustomNavController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,11 @@ class CalendarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    //Prevent the application from rotating
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
 
     /*
     // MARK: - Navigation
