@@ -8,15 +8,18 @@
 
 import Foundation
 import UIKit
+import MultipeerConnectivity
 
-class UserSingleton {
+class UserSingleton: NSObject, MCBrowserViewControllerDelegate, MCSessionDelegate {
     
-    static let sharedInformation = UserSingleton()
+    static let sharedInstance = UserSingleton()
     
-    static var userClass: Int!
+    var userClass: Int!
     
-    init() {
-//        let defaults = NSUserDefaults.standardUserDefaults()
-    }
+    var userConnected: Bool = false
+    
+    
+    
+    
     
 }
