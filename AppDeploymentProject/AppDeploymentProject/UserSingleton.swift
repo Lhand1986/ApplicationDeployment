@@ -8,18 +8,13 @@
 
 import Foundation
 import UIKit
-import MultipeerConnectivity
+import CoreData
 
-class UserSingleton: NSObject, MCBrowserViewControllerDelegate, MCSessionDelegate {
-    
+class UserSingleton {
+    /*Allow information to be shared across the device, from one view controller to another utilizing a single 
+     instance of this class */
     static let sharedInstance = UserSingleton()
-    
     var userClass: Int!
-    
     var userConnected: Bool = false
-    
-    
-    
-    
-    
+    var users: [NSManagedObject] = []
 }

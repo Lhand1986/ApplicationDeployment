@@ -15,6 +15,7 @@
 		5D0CB1061CFE535D00001C96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D0CB1041CFE535D00001C96 /* LaunchScreen.storyboard */; };
 		5D0CB1111CFE535D00001C96 /* AppDeploymentProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0CB1101CFE535D00001C96 /* AppDeploymentProjectTests.swift */; };
 		5D0CB11C1CFE535D00001C96 /* AppDeploymentProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0CB11B1CFE535D00001C96 /* AppDeploymentProjectUITests.swift */; };
+		5D4D4D721D1CB33F008579D8 /* StudentListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D4D711D1CB33F008579D8 /* StudentListTableViewCell.swift */; };
 		5D5B742A1D089C7D00D9FA61 /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B74291D089C7D00D9FA61 /* StudentListViewController.swift */; };
 		5D5B742C1D089C9E00D9FA61 /* SelectedStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B742B1D089C9E00D9FA61 /* SelectedStudentViewController.swift */; };
 		5D5B742E1D089CA800D9FA61 /* NewStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B742D1D089CA800D9FA61 /* NewStudentViewController.swift */; };
@@ -26,6 +27,9 @@
 		5D9238881D14985100C6C13C /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9238871D14985100C6C13C /* CustomNavController.swift */; };
 		5D983BE01D16152C00C999AD /* CalendarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D983BDF1D16152C00C999AD /* CalendarData.swift */; };
 		5D983BE21D1771B700C999AD /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D983BE11D1771B700C999AD /* Student.swift */; };
+		5D983BEA1D1B5E0800C999AD /* SnapshotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D983BE91D1B5E0800C999AD /* SnapshotCell.swift */; };
+		5D983BEC1D1B5E1400C999AD /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D983BEB1D1B5E1400C999AD /* ScheduleCell.swift */; };
+		5DAB82861D1F564D0080E5A7 /* SelectedStudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAB82851D1F564D0080E5A7 /* SelectedStudentTableViewCell.swift */; };
 		5DB9F52A1D0758B80040666A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB9F5291D0758B80040666A /* CalendarViewController.swift */; };
 		5DB9F52C1D0758CA0040666A /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB9F52B1D0758CA0040666A /* PlanViewController.swift */; };
 		5DB9F52E1D0758DB0040666A /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB9F52D1D0758DB0040666A /* OptionsViewController.swift */; };
@@ -63,6 +67,7 @@
 		5D0CB1171CFE535D00001C96 /* AppDeploymentProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppDeploymentProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D0CB11B1CFE535D00001C96 /* AppDeploymentProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDeploymentProjectUITests.swift; sourceTree = "<group>"; };
 		5D0CB11D1CFE535D00001C96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D4D4D711D1CB33F008579D8 /* StudentListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentListTableViewCell.swift; sourceTree = "<group>"; };
 		5D5B74291D089C7D00D9FA61 /* StudentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentListViewController.swift; sourceTree = "<group>"; };
 		5D5B742B1D089C9E00D9FA61 /* SelectedStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedStudentViewController.swift; sourceTree = "<group>"; };
 		5D5B742D1D089CA800D9FA61 /* NewStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewStudentViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +79,9 @@
 		5D9238871D14985100C6C13C /* CustomNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
 		5D983BDF1D16152C00C999AD /* CalendarData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarData.swift; sourceTree = "<group>"; };
 		5D983BE11D1771B700C999AD /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		5D983BE91D1B5E0800C999AD /* SnapshotCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotCell.swift; sourceTree = "<group>"; };
+		5D983BEB1D1B5E1400C999AD /* ScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
+		5DAB82851D1F564D0080E5A7 /* SelectedStudentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedStudentTableViewCell.swift; sourceTree = "<group>"; };
 		5DB9F5291D0758B80040666A /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		5DB9F52B1D0758CA0040666A /* PlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
 		5DB9F52D1D0758DB0040666A /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
@@ -130,20 +138,24 @@
 				5D0CB0F81CFE535D00001C96 /* AppDelegate.swift */,
 				5D9238871D14985100C6C13C /* CustomNavController.swift */,
 				5D0CB0FA1CFE535D00001C96 /* ViewController.swift */,
+				5DB9F52D1D0758DB0040666A /* OptionsViewController.swift */,
 				5DB9F5291D0758B80040666A /* CalendarViewController.swift */,
 				5D9238831D1326F100C6C13C /* CustomCalendarCell.swift */,
 				5D983BDF1D16152C00C999AD /* CalendarData.swift */,
 				5D983BE11D1771B700C999AD /* Student.swift */,
 				5DB9F52B1D0758CA0040666A /* PlanViewController.swift */,
+				5D983BE91D1B5E0800C999AD /* SnapshotCell.swift */,
+				5D983BEB1D1B5E1400C999AD /* ScheduleCell.swift */,
 				5D5B74291D089C7D00D9FA61 /* StudentListViewController.swift */,
+				5D4D4D711D1CB33F008579D8 /* StudentListTableViewCell.swift */,
 				5D5B742B1D089C9E00D9FA61 /* SelectedStudentViewController.swift */,
+				5DAB82851D1F564D0080E5A7 /* SelectedStudentTableViewCell.swift */,
 				5D5B742D1D089CA800D9FA61 /* NewStudentViewController.swift */,
-				5DB9F52D1D0758DB0040666A /* OptionsViewController.swift */,
-				5D5B74311D08CC3800D9FA61 /* UserSingleton.swift */,
 				5D5B742F1D089FF100D9FA61 /* LessonTemplateViewController.swift */,
 				5D5B74371D0A680000D9FA61 /* TemplateItem.swift */,
 				5D5B74351D0A303300D9FA61 /* CustomTemplateCell.swift */,
 				5D0CB0FC1CFE535D00001C96 /* Main.storyboard */,
+				5D5B74311D08CC3800D9FA61 /* UserSingleton.swift */,
 				5D0CB1021CFE535D00001C96 /* Assets.xcassets */,
 				5D0CB1041CFE535D00001C96 /* LaunchScreen.storyboard */,
 				5D0CB1071CFE535D00001C96 /* Info.plist */,
@@ -238,6 +250,7 @@
 				TargetAttributes = {
 					5D0CB0F41CFE535D00001C96 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = QV8D3238N7;
 					};
 					5D0CB10B1CFE535D00001C96 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -306,16 +319,20 @@
 				5D5B74301D089FF100D9FA61 /* LessonTemplateViewController.swift in Sources */,
 				5D5B74361D0A303300D9FA61 /* CustomTemplateCell.swift in Sources */,
 				5D5B742A1D089C7D00D9FA61 /* StudentListViewController.swift in Sources */,
+				5DAB82861D1F564D0080E5A7 /* SelectedStudentTableViewCell.swift in Sources */,
 				5D5B74381D0A680000D9FA61 /* TemplateItem.swift in Sources */,
 				5D983BE21D1771B700C999AD /* Student.swift in Sources */,
+				5D4D4D721D1CB33F008579D8 /* StudentListTableViewCell.swift in Sources */,
 				5DB9F52A1D0758B80040666A /* CalendarViewController.swift in Sources */,
 				5DB9F52C1D0758CA0040666A /* PlanViewController.swift in Sources */,
 				5D0CB1011CFE535D00001C96 /* AppDeploymentProject.xcdatamodeld in Sources */,
 				5DB9F52E1D0758DB0040666A /* OptionsViewController.swift in Sources */,
+				5D983BEA1D1B5E0800C999AD /* SnapshotCell.swift in Sources */,
 				5D5B742C1D089C9E00D9FA61 /* SelectedStudentViewController.swift in Sources */,
 				5D9238841D1326F100C6C13C /* CustomCalendarCell.swift in Sources */,
 				5D5B742E1D089CA800D9FA61 /* NewStudentViewController.swift in Sources */,
 				5D0CB0FB1CFE535D00001C96 /* ViewController.swift in Sources */,
+				5D983BEC1D1B5E1400C999AD /* ScheduleCell.swift in Sources */,
 				5D9238881D14985100C6C13C /* CustomNavController.swift in Sources */,
 				5D0CB0F91CFE535D00001C96 /* AppDelegate.swift in Sources */,
 			);
@@ -461,9 +478,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AppDeploymentProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fullsail.AppDeploymentProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fullsail.Lhand.AppDeploymentProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -472,9 +490,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AppDeploymentProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fullsail.AppDeploymentProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fullsail.Lhand.AppDeploymentProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

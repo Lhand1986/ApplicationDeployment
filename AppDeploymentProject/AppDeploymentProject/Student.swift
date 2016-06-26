@@ -9,6 +9,7 @@
 import Foundation
 
 class Student {
+    //Create a custom class object that can hold the student information data
     var name: String!
     var lessonsRemain: String!
     var lessonsComplete: String!

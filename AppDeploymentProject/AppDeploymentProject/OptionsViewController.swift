@@ -19,7 +19,7 @@ class OptionsViewController: UIViewController, MCBrowserViewControllerDelegate, 
     //Declare variables and constants here
     var deviceName: String!
     let alert = UIAlertController(title: "No Session ID", message: "Please enter at least a Session ID and press return to save in order to search for other users.", preferredStyle: UIAlertControllerStyle.Alert)
-    
+    let defaults = NSUserDefaults.standardUserDefaults()
     
     /* Multipeer Application building blocks */
     var peerID:MCPeerID! //Our device's ID or name as viewed by other devices "browsing" for a connection
@@ -32,9 +32,6 @@ class OptionsViewController: UIViewController, MCBrowserViewControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        deviceId.delegate = self
-        sessionId.delegate = self
         
         //Set up button outlines
         instructorButton.layer.borderWidth = 0.1
@@ -54,7 +51,7 @@ class OptionsViewController: UIViewController, MCBrowserViewControllerDelegate, 
         //Tell the session to look for the necessary functions inside this class
         session.delegate = self
         
-        
+        setIdent()
         
     }
 
@@ -73,11 +70,29 @@ class OptionsViewController: UIViewController, MCBrowserViewControllerDelegate, 
         UserSingleton.sharedInstance.userClass = sender.tag
     }
     
-    //Change the
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         deviceName = deviceId.text
         serviceID = sessionId.text
         return true
+    }
+    
+    /* Function to call for the multiple instances necessary of the alert presentation */
+    func alertShow() {
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    /* Set up a function that will check to see if the session and id have been set, and if
+     they have, to show the user by assigning those values to the text fields*/
+    func setIdent() {
+        guard let currentSession = defaults.valueForKey("sessionId") as? String else{
+            return
+        }
+        guard let currentId = defaults.valueForKey("deviceId") as? String else{
+            return
+        }
+        sessionId.text = currentSession
+        deviceId.text = currentId
+        
     }
     
     //Mark: User Defined IBActions
@@ -90,7 +105,17 @@ class OptionsViewController: UIViewController, MCBrowserViewControllerDelegate, 
         buttonToggle(sender)
     }
     
-    @IBAction func userNameChange(sender: UITextField){
+    @IBAction func saveButton(sender: UIButton){
+        guard let sessionText = sessionId.text else {
+            alertShow()
+            return
+        }
+        guard let deviceText = deviceId.text else {
+            alertShow()
+            return
+        }
+        defaults.setObject(sessionText, forKey: "sessionId")
+        defaults.setObject(deviceText, forKey: "deviceId")
         
     }
     
@@ -103,7 +128,7 @@ class OptionsViewController: UIViewController, MCBrowserViewControllerDelegate, 
             browser.delegate = self
             self.presentViewController(browser, animated: true, completion: nil)
         } else {
-            self.presentViewController(alert, animated: true, completion: nil)
+            alertShow()
         }
     }
     

@@ -77,14 +77,11 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cellReuse", forIndexPath: indexPath) as! CalendarCell
         
         let months = calendar.calculateLength()
-//        cell.selected = false
-//        cell.sizeToFit()
         if monthCounter <= months {
             cell.dayLabel.text = String(monthCounter)
         } else {
             cell.dayLabel.text = ""
         }
-        cell.createLabel("Boondogga")
         monthCounter+=1
         return cell
     }
@@ -95,13 +92,11 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
     
     // MARK - CollectionViewDelegate Protocols
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
-        
-    }
+//    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+//        
+//    }
     
-    /*Allow the user to select a specific cell, saving the index value of that cell and providing user feedback 
-     NEED TO ADD LOGIC HERE TO ENSURE THE USER CAN ONLY SELECT ONE CELL*/
+    /*Allow the user to select a specific cell, saving the index value of that cell and providing user feedback */
     func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
         if selectedIndex == indexPath {
             let cell: UICollectionViewCell = collectionView.cellForItemAtIndexPath(selectedIndex!)!
@@ -116,22 +111,17 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     // MARK - User Defined Functions
-    
-    
     func setCellSize(width: Float, height: Float) {
         cellWidth = calendarWidth * width
         cellHeight = calendarHeight * height
     }
     
-    func backgroundChange() {
-        
-    }
-    
     // MARK - IBActions
     
+    /* Create a case switch that will cause the calendar to resize based on the selection
+     of the segmented control, and update on selection*/
     @IBAction func changeIndex(sender:UISegmentedControl) {
         
-        print(sender.selectedSegmentIndex)
         switch sender.selectedSegmentIndex {
         case 0:
             sectionsValue = 1
@@ -154,7 +144,6 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
             setCellSize(0.08, height: 0.2)
             monthCounter = 1
         }
-//        monthCounter = 1
         collectionCalendar.reloadData()
     
     }

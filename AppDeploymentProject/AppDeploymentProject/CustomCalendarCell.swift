@@ -20,7 +20,6 @@ class CalendarCell: UICollectionViewCell {
         let dayHeight = CGFloat(dayView.bounds.size.height)
         let dayWidth = CGFloat(self.bounds.size.width)
         let label = UILabel()
-//        let leading = NSLayoutConstraint(item: label, attribute: .LeadingMargin, relatedBy: .Equal, toItem: UIView(), attribute: .LeadingMargin, multiplier: 1.0, constant: 20)
         labelPosition = dayHeight
         label.frame = CGRectMake(6, (labelPosition), dayWidth, 30)
         label.backgroundColor = .brownColor()
@@ -29,13 +28,8 @@ class CalendarCell: UICollectionViewCell {
         label.textAlignment = .Left
         label.text = appt
         label.minimumScaleFactor = 0.1
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//        label.addConstraint(leading)
         label.centerXAnchor
         label.centerYAnchor
-        
-        
-        
         dayView.addSubview(label)
     }
     
